@@ -1,0 +1,9 @@
+{
+  "name": "@learn-2-earn/config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/neshmasood/learn2earn",
+  "author": "Nesh Masood",
+  "license": "MIT",
+  "private": true
+}
