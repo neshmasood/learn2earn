@@ -1,4 +1,4 @@
-
+const path = require("path");
 require("dotenv").config({path: "../.env"});
 
 /* ==== External Modules ==== */
@@ -18,10 +18,12 @@ const routes = require("./routes")
 require("./config/database");
 
 /* ==== Configuration ==== */
-const config = require("@learn-2-earn/config")
+const config = require("@learn2earn/config")
 
 /* ==== Middleware ==== */
 app.use(cors());
+app.use(express.static(path.join("build")));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
@@ -31,6 +33,10 @@ app.use("/api", routes)
 app.all("/api/*", (req, res, next) =>{
 	res.send("THESE ARE NOT THE APIS YOU ARE LOOKING FOR")
 })
+
+app.use((req, res, next) => {
+	res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 
 /* ====  Server Listener  ==== */
