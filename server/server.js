@@ -1,8 +1,8 @@
-const path = require("path");
 require("dotenv").config({path: "../.env"});
 
 /* ==== External Modules ==== */
 const express = require("express");
+const path = require("path");
 
 //Required for method override
 const cors = require("cors");

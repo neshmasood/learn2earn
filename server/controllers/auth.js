@@ -16,8 +16,8 @@ const login = async (req, res) => {
             const token = jwt.sign({_id: foundUser._id}, "learn2earnteaching", {
                 expiresIn: ""
             })
-            return res.status(201).json({
-                status: 201,
+            return res.status(200).json({
+                status: 200,
                 message: "successful login",
                 token,
                 userId: foundUser._id
