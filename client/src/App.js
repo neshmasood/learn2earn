@@ -4,7 +4,7 @@ import * as authService from "./api/auth.service";
 import Users from "./components/Users"
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import WelcomePage from "./pages/WelcomePage";
+import WelcomePage from "../src/pages/WelcomePage";
 
 
 function App() {
