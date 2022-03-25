@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const { users } = require("../controllers")
-// const authRequired = require('../middleware/auth.required')
+const authRequired = require('../middleware/auth.required')
 
 router.get("/", users.index);
 //temporarily remove authRequried to show profile 

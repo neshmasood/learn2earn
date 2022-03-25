@@ -9,11 +9,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <BrowserRouter>
   <React.StrictMode>
-    <h2>Hello World!</h2>,
     <App />
   </React.StrictMode>,
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 
