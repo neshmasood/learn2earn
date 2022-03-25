@@ -24,7 +24,7 @@ const show = async (req, res) => {
     // can't figure out how to get the profile with req.userId
     // so use req.param.id
     try {
-        const foundUser = await db.User.findById(req.params.id)
+        const foundUser = await db.User.findById(req.params.id).populate()
         return res.status(200).json({
             message: "Success",
             data: foundUser
@@ -56,8 +56,52 @@ const create = async (req, res) => {
         })
     }
 };
-module.export = {
+//Update
+const update = async (req, res) => {
+
+    try {
+        // const salt = await bcrypt.genSalt(10);
+        // const hash = await bcrypt.hash(req.body.password, salt)
+
+        const foundUser = await db.User.findById(req.params.id)
+        const updatedUser = await db.User.findByIdAndUpdate(
+            {_id : foundUser._id},
+            req.body,
+            { new: true }
+        )
+        // updatedUser.password = hash
+        return res.status(201).json({ 
+            message: "User Updated", 
+            data: updatedUser
+        })
+    } catch(error) {
+        return res.status(500).json({
+            status: 500,
+            message: "Internal Server Error"
+        })
+    }
+};
+
+// Delete
+const destroy = (req, res) => {
+    db.User.findByIdAndDelete(req.params.id, (err, deletedUser) =>{
+        if (err) 
+        return res.status(400).json({
+            message: "Failure",
+            error: err
+        })
+        return res.status(200).json({
+            message: "User Deleted",
+            data: deletedUser
+        })    
+    })
+}
+
+
+module.exports = {
     index,
     show,
-    create
+    create,
+    update,
+    destroy
 }

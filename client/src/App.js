@@ -3,8 +3,8 @@ import {Routes, Route} from "react-router-dom";
 import * as authService from "./api/auth.service";
 import Users from "./components/Users"
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import WelcomePage from "../src/components/WelcomePage";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import WelcomePage from "./pages/WelcomePage";
 
 
 function App() {

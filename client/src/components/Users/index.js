@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import * as userService from "../../api/user.service";
-import User from "../User";
+import User from "../../components/User";
+
+
 const Users = () => {
     const [users, setUsers] = useState([]);
     const fetchUsers = async () => {
@@ -11,6 +13,7 @@ const Users = () => {
     useEffect(() => {
         fetchUsers();
     }, [])
+
     return (
         <div>
             <h1>Users</h1>
