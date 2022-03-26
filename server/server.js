@@ -1,9 +1,10 @@
+const path = require("path");
 require("dotenv").config({path: "../.env"});
 
 /* ==== External Modules ==== */
 const express = require("express");
 // const mongoose = require("mongoose");
-const path = require("path");
+
 
 //Required for method override
 const cors = require("cors");
@@ -23,7 +24,7 @@ const config = require("@learn2earn/config")
 
 /* ==== Middleware ==== */
 app.use(cors());
-app.use(express.static(path.join("build")));
+app.use(express.static(path.join(__dirname, "build")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -36,7 +37,7 @@ app.all("/api/*", (req, res, next) =>{
 })
 
 app.use((req, res, next) => {
-	res.sendFile(path.join(__dirname, 'build', 'index.html'));
+	res.sendFile(path.join(__dirname, "build", ".."));
 });
 
 
