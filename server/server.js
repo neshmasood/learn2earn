@@ -36,7 +36,7 @@ app.all("/api/*", (req, res, next) =>{
 })
 
 app.use((req, res, next) => {
-	res.sendFile(path.join(__dirname, "build", "index.html"));
+	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 
