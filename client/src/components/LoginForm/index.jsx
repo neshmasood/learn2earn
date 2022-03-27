@@ -13,7 +13,7 @@ export default function LoginForm () {
         await authService.login(email, password).then(()=> {
             setEmail("")
             setPassword("")
-            document.location = "/"
+            document.location = "/profile"
         })
     }
 
@@ -38,17 +38,16 @@ export default function LoginForm () {
                     name="password"
                     placeholder="Password"
                 />
-                <button 
-                    className="" 
-                    onClick={handleSubmit}
-                > Log In</button>
+                <button className="" onClick={handleSubmit}> Log In</button>
             </form>
 
             <div className="">
                 <span>Don't have an account?</span>
-                <Link to="Signup"><button className="">Sign up</button></Link>
+                <Link to="signup"><button className="">Sign up</button></Link>
             </div>
         </div>
     )
 
 }
+
+
