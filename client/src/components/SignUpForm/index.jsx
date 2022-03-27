@@ -33,9 +33,8 @@ export default function SignUpForm() {
     }
     return(
         <div className="signUpFormComponent">
-            
             <form className="signUpForm">
-            <h3 className="">Sign Up and Start Teaching!</h3>
+                <h3 className="">Sign Up and Start Teaching!</h3>
                 <label htmlFor="firstName">First Name*</label>
                 <input 
                     className=""
@@ -73,9 +72,18 @@ export default function SignUpForm() {
                     name="password"
                     placeholder="5+ Characters"
                 />
+
+                <label htmlFor="userStatus">Select User Status*</label>
+                <select className="signUpForm-input" onChange={(e)=>setUserStatus(e.target.value)}>
+                    <option>- - -</option>
+                    <option value="admin">Administrator</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="tutor">Tutor</option>
+                    <option value="volunteer">Volunteer</option>
+                </select>
                 <div className="">
                     <span>* Sign-Up then Log-In to get started! </span>
-
                 </div>
                 <button 
                     className="" 
@@ -95,4 +103,4 @@ export default function SignUpForm() {
 
         </div>
     )
-    }
+}
