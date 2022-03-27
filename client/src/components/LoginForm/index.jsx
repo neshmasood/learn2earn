@@ -43,7 +43,7 @@ export default function LoginForm () {
 
             <div className="">
                 <span>Don't have an account?</span>
-                <Link to="signup"><button className="">Sign up</button></Link>
+                <Link to="signUp"><button className="">Sign up</button></Link>
             </div>
         </div>
     )

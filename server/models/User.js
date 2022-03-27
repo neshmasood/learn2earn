@@ -25,8 +25,10 @@ const userSchema = new Schema({
     userStatus: {
         type: String,
         required: true,
-        // i need a drop down of students, admin, volunter, etc. Maybe a dropDown?
-    }
+        // i need a drop down of students, admin, volunteer, etc. Maybe a dropDown?
+    },
+
+    feedback: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 const User = mongoose.model("User", userSchema);

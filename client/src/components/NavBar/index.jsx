@@ -15,6 +15,9 @@ export default function NavBar(props) {
                 <span>{props.firstName}</span>
             </div>
             <div>
+                <h5>Link to google calendar</h5>
+            </div>
+            <div>
                 <Logout />
             </div>
         </header>

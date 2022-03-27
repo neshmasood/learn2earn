@@ -34,7 +34,7 @@ export default function SignUpForm() {
     return(
         <div className="signUpFormComponent">
             <form className="signUpForm">
-                <h3 className="">Sign Up and Start Teaching!</h3>
+                <h4 className="">Sign Up and Start Teaching!</h4>
                 <label htmlFor="firstName">First Name*</label>
                 <input 
                     className=""

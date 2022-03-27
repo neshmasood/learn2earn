@@ -9,6 +9,7 @@ import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProfileEditForm from "./components/ProfileEditForm";
 import NavBar from "../src/components/NavBar";
+import FeedbackForm from "./components/FeedbackForm";
 
 
 
@@ -47,9 +48,10 @@ if (isLoggedIn){
       <Routes>
         <Route path="/" element={<WelcomePage />}></Route>
         <Route path="/profile" element={<ProfilePage profile={profile}/>} />
-        <Route path="/signup" element={<SignUpPage />}/>
+        <Route path="/signUp" element={<SignUpPage />}/>
         <Route path="users" element={<Users />} />
         <Route path="profile/edit" element={<ProfileEditForm profile={profile}/>} />
+        <Route path="feedback" element={<FeedbackForm/>} />
       </Routes>
      
     </div>
