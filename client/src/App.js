@@ -8,6 +8,7 @@ import WelcomePage from "./pages/WelcomePage";
 import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProfileEditForm from "./components/ProfileEditForm";
+import NavBar from "../src/components/NavBar";
 
 
 
@@ -40,6 +41,9 @@ useEffect(()=> {
 if (isLoggedIn){
   return (
     <div className="App">
+
+      <NavBar firstName={profile.firstName}/>
+
       <Routes>
         <Route path="/" element={<WelcomePage />}></Route>
         <Route path="/profile" element={<ProfilePage profile={profile}/>} />
