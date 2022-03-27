@@ -22,11 +22,11 @@ const userSchema = new Schema({
         // password will not show up on a query search
         select: false
     },
-    // userStatus: {
-    //     type: String,
-    //     required: true,
-    //     // i need a drop down of students, admin, volunter, etc. Maybe a dropDown?
-    // }
+    userStatus: {
+        type: String,
+        required: true,
+        // i need a drop down of students, admin, volunter, etc. Maybe a dropDown?
+    }
 });
 
 const User = mongoose.model("User", userSchema);

@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <BrowserRouter>
   <React.StrictMode>
-    <h3>Hello world</h3>
     <App />
   </React.StrictMode>
   </BrowserRouter>,

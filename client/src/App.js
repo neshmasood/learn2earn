@@ -5,6 +5,7 @@ import Users from "./components/Users"
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import WelcomePage from "./pages/WelcomePage";
+import SignUpPage from './pages/SignUpPage';
 
 
 
@@ -31,6 +32,7 @@ if (isLoggedIn){
     <div className="App">
       <Routes>
         <Route path="/" element={<WelcomePage />}></Route>
+        <Route path="/signup" element={<SignUpPage />}/>
         <Route path="users" element={<Users />} />
       </Routes>
      
@@ -42,6 +44,7 @@ if (isLoggedIn){
       <div className="App">
           <Routes>
               <Route path="/" element={<WelcomePage />}/>
+              <Route path="/signup" element={<SignUpPage />}/>
           </Routes>
       </div>
   );
