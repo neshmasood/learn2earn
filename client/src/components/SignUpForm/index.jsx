@@ -55,9 +55,9 @@ export default function SignUpForm() {
                 <div class="d-flex flex-column flex-lg-row-fluid py-10">
                 
                     <div class="d-flex flex-center flex-column flex-column-fluid">
-                        <a href="../dist/index.html" class="py-9 pt-lg-20">
+                        {/* <a href="#" class="py-9 pt-lg-20"> */}
                             <img alt="Logo" src="assets/images/l2l_logo.webp" class="h-70px" />
-                        </a>
+                        {/* </a> */}
                         <div class="w-lg-500px p-10 p-lg-15 mx-auto">
                             <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="../dist/index.html" action="#"> 
                                 <div class="text-center mb-10">  

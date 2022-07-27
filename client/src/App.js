@@ -63,7 +63,7 @@ if (isLoggedIn){
           <Routes>
               <Route path="/" element={<WelcomePage />}/>
               <Route path="/signup" element={<SignUpPage />}/>
-              <Route path="/profile" element={<ProfilePage />}/>
+
           </Routes>
       </div>
   );

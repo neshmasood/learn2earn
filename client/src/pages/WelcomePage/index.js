@@ -6,16 +6,15 @@ import LoginForm from "../../components/LoginForm";
 export default function WelcomePage() {
 	
 	return (
-	
-		<div>
-			<h2>Welcome to Learn2Earn-app! Please Sign Up to start</h2>
+
+		<div class="d-flex flex-column flex-lg-row flex-column-fluid">
+			
 			<div>
 				<LoginForm />
 			
 				
 			</div>
 		</div>
-
 
 
 	)
