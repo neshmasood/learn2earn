@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import * as authService from "./api/auth.service";
 import Users from "./components/Users"
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import WelcomePage from "./pages/WelcomePage";
 import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -63,6 +63,7 @@ if (isLoggedIn){
           <Routes>
               <Route path="/" element={<WelcomePage />}/>
               <Route path="/signup" element={<SignUpPage />}/>
+              <Route path="/profile" element={<ProfilePage />}/>
           </Routes>
       </div>
   );

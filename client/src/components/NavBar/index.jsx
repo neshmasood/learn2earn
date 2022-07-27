@@ -10,6 +10,11 @@ export default function NavBar(props) {
     return(
         <>
         <header>
+
+
+
+
+            
             <NavLink to="/profile">Profile Page</NavLink>
             <div>
                 <span>{props.firstName}</span>
