@@ -120,16 +120,17 @@ export default function SignUpForm() {
                                     <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5" onClick={handleSubmit}>
                                         <span class="indicator-label">Continue</span>
                                     </button>
-                                </div>      
+                                </div>
+                                <div className="">
+                                <span>Sign-Up then Login to get started! </span>
+                            </div>      
                             </form>
-                            <div className="">
-                                <span>* Sign-Up then Log-In to get started! </span>
-                            </div>
-                            <div className="">
+                            
+                            <div className="text-gray-600 fw-bold fs-5">
                                 <span>Have an account?</span>
                             
                                 <div className="logInLink">    
-                                    <Link to="/"><button className="">Log In</button></Link>
+                                    <Link to="/"><button className="btn btn-lg btn-primary w-60 mb-5">Log In</button></Link>
                                 </div>
                             </div>
                             <h1>{successMsg}</h1>            
